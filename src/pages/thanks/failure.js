@@ -12,14 +12,14 @@ export default function ThanksFailurePage() {
 			title="Oh no"
 			content="Your payment hasn't been received"
 			action={
-				<a href={URL}>
+			
 				<Button
 					className="bg-primary"
 					onClick={() => window.location.replace(URL)}
 					>
 					Return to home.
 				</Button>
-					</a>
+				
 			}
 			image={<Image src={thank} alt="" width={160} height={160} />}
 		/>

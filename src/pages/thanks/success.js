@@ -10,7 +10,7 @@ export default function ThanksSuccessPage() {
       title="Thank you"
       content="Your payment has been received successfully"
       action={
-        <a href="http://localhost:8080">
+        <a href="https://payments-system1.vercel.app/">
           <Button
             className="bg-primary"
             onClick={() => window.location.replace(URL)}

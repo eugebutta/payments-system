@@ -12,7 +12,7 @@ export default function ThanksFailurePage() {
 			title="Oh no"
 			content="Your payment hasn't been received"
 			action={
-				<a href="https://payments-system1.vercel.app">
+				<a href={URL}>
 				<Button
 					className="bg-primary"
 					onClick={() => window.location.replace(URL)}

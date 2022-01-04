@@ -26,7 +26,7 @@ export function PayForm() {
 			elements,
 			confirmParams: {
 				// Make sure to change this to your payment completion page
-				return_url: `https://payments-system1.vercel.app//thanks/success`,
+				return_url: `${process.env.NEXT_PUBLIC_BASE_URL/thanks/success}`,
 			},
 		});
 		// This point will only be reached if there is an immediate error when

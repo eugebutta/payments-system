@@ -1,9 +1,9 @@
 // src/pages/index.js
 import Image from "next/image";
 import mercadopago from "mercadopago";
-import mpPic from '../public/img/mercadopago.png'
-import productPic from '../public/img/product.png'
-
+import mpPic from "../public/img/mercadopago.png";
+import productPic from "../public/img/product.png";
+import { getLayout } from '../layouts/main'
 import { Elements } from "@stripe/react-stripe-js";
 
 import { useStripeClientSecret, useStripePromise } from "../lib/stripe";
@@ -22,12 +22,7 @@ export default function IndexPage({ mercadoPagoUrl }) {
             <Button className="bg-[#01B1EA] flex justify-center items-center w-full">
               Pay with{" "}
               <span className="ml-1">
-                <Image
-                  height={40}
-                  width={98}
-                  src={mpPic}
-                  alt="Mercado Pago"
-                />
+                <Image height={40} width={98} src={mpPic} alt="Mercado Pago" />
               </span>
             </Button>
           </a>
@@ -92,6 +87,8 @@ export default function IndexPage({ mercadoPagoUrl }) {
   );
 }
 
+IndexPage.getLayout = getLayout;
+
 export async function getServerSideProps() {
   const isProd = process.env.NODE_ENV === "production";
 
@@ -125,3 +122,5 @@ export async function getServerSideProps() {
     },
   };
 }
+
+

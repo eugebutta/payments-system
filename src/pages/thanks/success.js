@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Message } from "../../ui/components";
 import { Button } from "../../ui/core";
-import { getLayout } from "../../layouts";
+import { getLayout } from '../../layouts'
 import thank from '../../public/img/thanks.png'
 export default function ThanksSuccessPage() {
   const URL = process.env.NEXT_PUBLIC_BASE_URL;
